@@ -6,11 +6,20 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Location House Search</h1>
-        <input type="text" id="house-input" placeholder="Enter Area Location" />
-        <button id="search-button">Search</button>
-        <div id="house-info"></div>
+    <div id="inputContainer">
+        <div>
+            <h2>Select Cities:</h2>
+            <label><input type="checkbox" value="Houston, TX" id="london" /> London</label><br />
+        </div>
+
+        <div>
+            <h2>Minimum Humidity:</h2>
+            <input type="number" id="houseInput" placeholder="Enter minimum price" />
+        </div>
+    </div>
+    <button id="getHouseButton">Get Weather</button>
+
+    <div id="house"></div>
     </div>
     <script src="scripts/script.js"></script>
 </body>
