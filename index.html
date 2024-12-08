@@ -7,18 +7,25 @@
 </head>
 <body>
     <div id="inputContainer">
-        <div>
+        <div class="top">
+            <h1>Zillow API Project</h1>
             <h2>Select Cities:</h2>
-            <label><input type="checkbox" value="Houston, TX" id="london" /> London</label><br />
-        </div>
-
-        <div>
-            <h2>Minimum Humidity:</h2>
-            <input type="number" id="houseInput" placeholder="Enter minimum price" />
-        </div>
+            <div id="city" class="buttons">
+                <label><input type="checkbox" value="Houston, TX" id="london" /> Houston</label><br />
+                <label><input type="checkbox" value="Miami, FL" id="florida" /> Miami</label><br />
+                <label><input type="checkbox" value="Beverly Hills, CA" id="beverly" /> Beverly Hill</label><br />
+            </div>
+            <div id="type" class="buttons">
+                <label><input type="checkbox" value="forSale" id="sale" /> For Sale</label><br />
+                <label><input type="checkbox" value="forRent" id="rent" /> For Rent </label><br />
+                <label><input type="checkbox" value="sold" id="soldlisting" /> Sold </label><br />
+            </div>
+            <div class="buttonsTwo">
+                <h2>Search Now:</h2>
+                <button id="getHouseButton">Get Houses</button>
+            </div>
+        </div>  
     </div>
-    <button id="getHouseButton">Get Weather</button>
-
     <div id="house"></div>
     </div>
     <script src="scripts/script.js"></script>

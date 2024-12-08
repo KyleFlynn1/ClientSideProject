@@ -1,41 +1,88 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 0;
-    display: flex;
-    justify-content: top;
-    align-items: center;
-    height: 100vh;
-    background-color: #dadada;
+    background-color: #454545;
+
+}
+.house {
+    width: 100%;
+    display: inline-block;
+    flex-direction: row;
 }
 
 .container {
-    text-align: center;
-    width: 30%;
-    background: #191a1fde;
-    color: white;
-    padding: 44px;
-    margin: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(239, 239, 239, 0.788);
+    float: left;
+    width: 20%;
+    padding: 20px;
+    margin: 10px;
+    height: 450px;
+    max-height: 450px;
+    border-radius: 15px ;
+    border-top: 5px solid #857cff;
+    border-right: 10px solid #857cff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; 
 }
 
-#house {
-    width: 100%;
+.container:hover {
+    transform: scale(1.05);
+    border-top: 5px solid #7cd3ff;
+    border-right: 10px solid #7cd3ff;
+}
+
+.container img {
+    max-height: 50%;
+}
+
+.top {
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons{
+    list-style-type: none;
+    padding: 5px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 2px;
-    justify-content: space-between 5px;
+    justify-content: center;
+    width: 100%;
+    margin-right: 15px;
+    color: white;
 }
 
-#house-info {
-    margin-top: 20px;
-    text-align: top;
+.buttonsTwo{
+    list-style-type: none;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-right: 15px;
+    color: white;
 }
 
-#inputContainer {
-    align-content: center;
-    display: inline-block;
-    flex-wrap: wrap;
-    justify-items: auto;
+.buttonsTwo button {
+    margin-top: 23px;
+    color: white;
+    height: 25px;
+    background-color: #7cd3ff;
+    border-radius: 20px;
+    border-top: solid 3px white;
+    border-right: solid 3px white;
+    border-left: none;
+    border-bottom: none;
+    margin-left: 10px;
+}
+
+.top h1 {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    color: #7cd3ff;
+    border-bottom: solid 5px #7cd3ff;
+    width: 50%;
+    margin-left: 41.5%;
+}
+
+.top h2 {
+    display: flex;
+    justify-content: center;
+    color: #857cff;
 }
