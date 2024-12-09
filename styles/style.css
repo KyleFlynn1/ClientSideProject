@@ -14,8 +14,8 @@ body {
     width: 20%;
     padding: 20px;
     margin: 10px;
-    height: 450px;
-    max-height: 450px;
+    height: 575px;
+    max-height: 575px;
     border-radius: 15px ;
     border-top: 5px solid #857cff;
     border-right: 10px solid #857cff;
@@ -78,7 +78,7 @@ body {
     color: #7cd3ff;
     border-bottom: solid 5px #7cd3ff;
     width: 50%;
-    margin-left: 41.5%;
+    margin-left: 43.5%;
 }
 
 .top h2 {
