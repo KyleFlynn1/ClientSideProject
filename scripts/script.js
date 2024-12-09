@@ -1,4 +1,4 @@
-const apiKey = 'dfd9e4c192msh4f1ce955d2673a0p121bf3jsnca194db37f90';
+const apiKey = '67ebc96918mshf722694c1c0425cp18a43cjsn4654236c4225';
 const apiHost = 'zillow-com4.p.rapidapi.com';
     
 document.getElementById('getHouseButton').addEventListener('click', async () => {
@@ -41,17 +41,33 @@ document.getElementById('getHouseButton').addEventListener('click', async () => 
     for (let i = 0; i < houses.length; i++) {
         const house = houses[i];
         const imageUrl = house.media.propertyPhotoLinks.highResolutionLink || 'https://via.placeholder.com/300x450?text=No+Image';
-        weatherHTML += `
-            <div class="container">
-                   <p><strong>Status:</strong> ${house.listing?.listingStatus || house.listingStatus || 'Unknown'} </p>
-                    <img src="${imageUrl}" alt="${house.price?.value}" style="max-width: 100%; height: auto; border-radius: 10px;" />
-                    <p><strong>Address:</strong> ${house.address.streetAddress}</p>
-                    <p><strong>Country:</strong> ${house.country}</p>
-                    <p><strong>Price: $</strong> ${house.price?.value || "N/A"}</p>
-                    <p><strong>Bedrooms:</strong> ${house.bedrooms}</p>
-                    <p><strong>Bathrooms:</strong> ${house.bathrooms}</p>
-            </div>
-        `;
+        if (selectedType[0] === "forRent")
+        {
+            weatherHTML += `
+                <div class="container">
+                    <p><strong>Status:</strong> ${house.listing?.listingStatus || house.listingStatus || 'Unknown'} </p>
+                        <img src="${imageUrl}" alt="${house.price?.value}" style="max-width: 100%; height: auto; border-radius: 10px;" />
+                        <p><strong>Address:</strong> ${house.address.streetAddress}</p>
+                        <p><strong>ZipCode:</strong> ${house.address.zipcode}</p>
+                        <p><strong>Rental Type: </strong> ${house.groupType || "N/A"}</p>
+                        <p><strong>Min Price:</strong> $ ${house.minPrice}</p>
+                        <p><strong>Max Price:</strong> $${house.maxPrice}</p>
+                </div>
+            `;
+        }
+        else{ 
+            weatherHTML += `
+                <div class="container">
+                    <p><strong>Status:</strong> ${house.listing?.listingStatus || house.listingStatus || 'Unknown'} </p>
+                        <img src="${imageUrl}" alt="${house.price?.value}" style="max-width: 100%; height: auto; border-radius: 10px;" />
+                        <p><strong>Address:</strong> ${house.address.streetAddress}</p>
+                        <p><strong>Country:</strong> ${house.country}</p>
+                        <p><strong>Price: $</strong> ${house.price?.value || "N/A"}</p>
+                        <p><strong>Bedrooms:</strong> ${house.bedrooms}</p>
+                        <p><strong>Bathrooms:</strong> ${house.bathrooms}</p>
+                </div>
+            `;
+        }
     }
     houseDiv.innerHTML = weatherHTML;
 });
